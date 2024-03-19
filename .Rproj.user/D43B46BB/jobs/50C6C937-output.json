@@ -4,4 +4,4 @@
 [1,"\r  |                                                          \r  |....................................................| 100%                  \r                                                                                                            \r\noutput file: trabajo-2-html.knit.md\r\n\r\n"]
 [1,"pandoc \n  to: html\n  output-file: trabajo 2 html.html\n  standalone: true\n  section-divs: true\n  html-math-method: mathjax\n  wrap: none\n  default-image-extension: png\n  \nmetadata\n  document-css: false\n  link-citations: true\n  date-format: long\n  lang: en\n  title: Trabajo 2\n  author: Damian Cespedes\n  editor: visual\n  bibliography:\n    - Trabajo-1.bib\n  \n"]
 [1,"Output created: trabajo 2 html.html\n\nWatching files for changes\n"]
-[1,"Browse at http://localhost:3040/\n"]
+[1,"Browse at http://localhost:3908/\n"]
