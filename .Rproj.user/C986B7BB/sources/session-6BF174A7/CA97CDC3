@@ -1,14 +1,14 @@
 {
-    "id": "F9BD955D",
+    "id": "CA97CDC3",
     "path": "~/R-2024/Trabajo-2/trabajo 2 html.qmd",
     "project_path": "trabajo 2 html.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "2449310367",
     "contents": "",
     "dirty": false,
-    "created": 1710904922923.0,
+    "created": 1711309993663.0,
     "source_on_save": false,
-    "relative_order": 2,
+    "relative_order": 1,
     "properties": {
         "rmdVisualMode": "true",
         "rmdVisualWrapConfigured": "true",
@@ -16,14 +16,17 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "131:0"
+        "rmdVisualModeLocation": "3393:946.3635864257812",
+        "cursorPosition": "21,36",
+        "scrollLine": "0",
+        "docOutlineSize": "110"
     },
     "folds": "",
-    "lastKnownWriteTime": 1710904684,
+    "lastKnownWriteTime": 1711327740,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1710904684,
+    "last_content_update": 1711327740718,
     "read_only": false,
     "read_only_alternatives": []
 }

@@ -1,0 +1,167 @@
+## Estadística IV, Guía N°2. Antonia Huilipán y Damián Céspedes
+
+### Paso N°1 -------------------------------------------------------
+# Pasos iniciales: Establecer directorio de trabajo
+
+setwd("C:/Users/vicen/OneDrive/Escritorio/Bases de datos R")
+
+options(scipen=999) #desactivar notación cientifica
+rm(list=(ls())) #Limpiar memoria de trabajo
+
+#Carga de paquetes
+install.packages("tidyverse")
+install.packages("table1")
+install.packages("psych")
+install.packages("haven")
+install.packages("sjmisc")
+install.packages("lm.beta")
+install.packages("dplyr")
+install.packages("Hmisc")
+install.packages("PerformanceAnalytics")
+install.packages("sjPlot")
+install.packages("texreg")
+
+library("tidyverse") 
+library("table1") 
+library("psych") 
+library("haven") 
+library("sjmisc") 
+library("lm.beta")
+library("dplyr")
+library("Hmisc")
+library("PerformanceAnalytics")
+library("sjPlot")
+library("texreg")
+
+### Paso N°2 ---------------------------------------------------
+#OBJETIVO: Identificar cuál de las siguientes variables es la que mayor efecto tiene en 
+#el Clima Social Escolar de las niñas y niños de entre 7 a 12 años de edad que 
+#fueron parte de la encuesta ‘ELPI’ en el año 2017:
+#variables: 1 sexo; 2 edad ; 3 notas (c3_a)
+
+#Cargar BBDD: Encuesta Longitudinal de Primera Infancia (ELPI), del año 2017.
+Base <- read_sav("Data/Data/Base Nin╠âos y Nin╠âas ELPI III (SPSS).sav")
+View(Base)
+# Explorar los datos 
+dim(Base)
+names(Base)
+head(Base)
+
+# Exploraración y seleccion de las siguientes variables
+#Variables Dependientes
+frq(Base$eclis_p1)#estadÃ­sticos descriptivos
+frq(Base$eclis_p2)#estadÃ­sticos descriptivos
+frq(Base$eclis_p3)#estadÃ­sticos descriptivos
+frq(Base$eclis_p4)#estadÃ­sticos descriptivos*
+frq(Base$eclis_p5)#estadÃ­sticos descriptivos*
+frq(Base$eclis_p6)#estadÃ­sticos descriptivos
+frq(Base$eclis_p7)#estadÃ­sticos descriptivos
+frq(Base$eclis_p8)#estadÃ­sticos descriptivos
+#Variables Independientes
+frq(Base$c3_a)#estadÃ­sticos descriptivos
+frq(Base$sexo)#estadÃ­sticos descriptivos
+frq(Base$edad)#estadÃ­sticos descriptivos
+
+### Paso N°3 -----------------------------------------------------
+#Revision de casos perdidos
+table(Base$eclis_p1, exclude = F) 
+table(Base$eclis_p2, exclude = F)
+table(Base$eclis_p3, exclude = F) 
+table(Base$eclis_p4, exclude = F) 
+table(Base$eclis_p5, exclude = F) 
+table(Base$eclis_p6, exclude = F) 
+table(Base$eclis_p7, exclude = F) 
+table(Base$eclis_p8, exclude = F) 
+table(Base$c3_a, exclude = F)
+
+#Eliminar casos perdidos
+Base <- Base %>%
+  select(eclis_p1:eclis_p8,c3_a, sexo, edad)  %>%
+  mutate_all(., ~(as.numeric(.))) %>%
+  na.omit(Base_ELPI)
+#Revision de eliminación de los NA
+frq(Base$eclis_p1)
+frq(Base$eclis_p2)
+frq(Base$eclis_p3)
+frq(Base$eclis_p4)
+frq(Base$eclis_p5)
+frq(Base$eclis_p6)
+frq(Base$eclis_p7)
+frq(Base$eclis_p8)
+frq(Base$c3_a)
+
+#Recodificación 
+Base <- Base %>%
+  mutate(sexo_recod=case_when(sexo==1 ~ 1, sexo==2 ~ 0, TRUE~ NA_real_))%>%
+  select(sexo_recod, c3_a, eclis_p1, eclis_p2, eclis_p3, eclis_p4, eclis_p5, eclis_p6, eclis_p7, eclis_p8, edad)
+
+# Estadisticos descriptivos para variable a utilizar
+table1(~ ., 
+       data = Base)
+
+# Confiabilidad de la Escala de Clima Social Escolar
+Base_eclis <- Base %>%
+  select(eclis_p1:eclis_p8)  %>%
+  mutate_all(., ~(as.numeric(.)))
+
+# Estadisticos descriptivos
+table1(~ ., 
+       data = Base_eclis)
+
+###Paso N°4 -------------------------------------------------------
+# Revertimos ítem "eclis_p3"
+Base[ ,"eclis_p3"] = 5 - Base[ ,"eclis_p3"]
+frq(Base$eclis_p3)
+
+#Alpha de Cronbach
+psych::alpha(Base_eclis)
+
+#Borramos el ítem eclis_p3 para  mejorar el ajuste de nuestras variables
+psych::alpha(Base_eclis[,c(1:2,4:8)])
+
+### Paso N°5 --------------------------------------------------
+#Creacion de indice percpeción clima socio-escolar
+
+Base <- Base %>%
+  mutate(Base_eclis=(eclis_p1+eclis_p2+eclis_p4+eclis_p5+eclis_p6+eclis_p7+eclis_p8)/7)
+
+descr(Base$Base_eclis)
+
+### Paso N°6 -------------------------------------------------------
+#Correlaciones
+na.omit(select(Base, Base_eclis, edad, c3_a))
+variable_corr<-na.omit(select(Base, Base_eclis, edad, c3_a))
+
+tab_corr(variable_corr)
+
+###Paso N°7 -------------------------------------------------------
+#Selecci?n de variables modelo de regresi?n
+Base_ELPI <- Base %>%
+  mutate(Notas=case_when(c3_a >=1 & c3_a <= 3 ~ 1, c3_a==4 ~ 0, TRUE~ NA_real_))%>%
+  select(sexo_recod, Base_eclis, Notas, edad)
+
+#MODELOS DE REGRESION LINEAL
+#MODELO GENERAL
+modelo1 = lm(formula = Base_eclis~edad, data=Base_ELPI)
+modelo2 = lm(formula = Base_eclis~edad+Notas, data=Base_ELPI)
+modelo3 = lm(formula = Base_eclis~edad+Notas+sexo_recod+edad*sexo_recod, data=Base_ELPI)
+
+screenreg(l=list(modelo1,modelo2,modelo3), 
+          single.row = TRUE, 
+          stars = c(0.001,0.01, 0.05))
+
+#BETAS ESTANDARIZADOS
+lm.beta(modelo1)
+lm.beta(modelo2)
+lm.beta(modelo3)
+
+sjPlot::tab_model(list(modelo1, modelo2, modelo3),
+                  show.ci=FALSE, 
+                  show.reflvl = TRUE,
+                  p.style = "numeric_stars", 
+                  dv.labels = c("Modelo 1", "Modelo 2", "Modelo 3"), 
+                  string.pred = "Predictores", string.est = "β", 
+                  string.intercept = "(Intercepto)", 
+                  digits = 3, 
+                  encoding =  "UTF-8",
+                  lang = "es")  

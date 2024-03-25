@@ -194,6 +194,162 @@
             "title-short": "Biased perceptions of income distribution and preferences for redistribution",
             "type": "article-journal",
             "volume": "98"
+        },
+        {
+            "DOI": "10.15446/anpol.v33n98.89407",
+            "URL": "https://revistas.unal.edu.co/index.php/anpol/article/view/89407",
+            "author": [
+                {
+                    "family": "Morales Quiroga",
+                    "given": "Mauricio"
+                }
+            ],
+            "container-title": "Análisis Político",
+            "id": "moralesquiroga2020",
+            "issue": "98",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        1,
+                        1
+                    ]
+                ]
+            },
+            "page": "3-25",
+            "title": "Estallido social en chile 2019: Participación, representación, confianza institucional y escándalos públicos",
+            "title-short": "Estallido social en chile 2019",
+            "type": "article-journal",
+            "volume": "33"
+        },
+        {
+            "DOI": "10.5565/rev/athenead/v0n17.654",
+            "URL": "http://atheneadigital.net/article/view/n17-laso",
+            "author": [
+                {
+                    "family": "Laso",
+                    "given": "Esteban"
+                }
+            ],
+            "container-title": "Athenea Digital. Revista de pensamiento e investigación social",
+            "id": "laso2010",
+            "issue": "17",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010,
+                        3,
+                        1
+                    ]
+                ]
+            },
+            "page": "97",
+            "title": "Trust as a crossroad: Culture, development and corruption",
+            "title-short": "Trust as a crossroad",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.4067/S0718-090X2008000200007",
+            "URL": "http://www.scielo.cl/scielo.php?script=sci_arttext&pid=S0718-090X2008000200007&lng=en&nrm=iso&tlng=en",
+            "author": [
+                {
+                    "family": "Morales Quiroga",
+                    "given": "Mauricio"
+                }
+            ],
+            "container-title": "Revista de ciencia política (Santiago)",
+            "id": "moralesquiroga2008",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "language": "en",
+            "title": "Evaluando la confianza institucional en Chile: Una mirada desde los resultados LAPOP",
+            "title-short": "Evaluando la confianza institucional en Chile",
+            "type": "article-journal",
+            "volume": "28"
+        },
+        {
+            "DOI": "10.4067/S0718-090X2008000200007",
+            "URL": "http://www.scielo.cl/scielo.php?script=sci_arttext&pid=S0718-090X2008000200007&lng=en&nrm=iso&tlng=en",
+            "author": [
+                {
+                    "family": "Morales Quiroga",
+                    "given": "Mauricio"
+                }
+            ],
+            "container-title": "Revista de ciencia política (Santiago)",
+            "id": "moralesquiroga2008a",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "language": "en",
+            "title": "Evaluando la confianza institucional en Chile: Una mirada desde los resultados LAPOP",
+            "title-short": "Evaluando la confianza institucional en Chile",
+            "type": "article-journal",
+            "volume": "28"
+        },
+        {
+            "DOI": "10.15446/anpol.v33n98.89407",
+            "URL": "https://revistas.unal.edu.co/index.php/anpol/article/view/89407",
+            "author": [
+                {
+                    "family": "Morales Quiroga",
+                    "given": "Mauricio"
+                }
+            ],
+            "container-title": "Análisis Político",
+            "id": "moralesquiroga2020a",
+            "issue": "98",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        1,
+                        1
+                    ]
+                ]
+            },
+            "page": "3-25",
+            "title": "Estallido social en chile 2019: Participación, representación, confianza institucional y escándalos públicos",
+            "title-short": "Estallido social en chile 2019",
+            "type": "article-journal",
+            "volume": "33"
+        },
+        {
+            "DOI": "10.5565/rev/athenead/v0n17.654",
+            "URL": "http://atheneadigital.net/article/view/n17-laso",
+            "author": [
+                {
+                    "family": "Laso",
+                    "given": "Esteban"
+                }
+            ],
+            "container-title": "Athenea Digital. Revista de pensamiento e investigación social",
+            "id": "laso2010a",
+            "issue": "17",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010,
+                        3,
+                        1
+                    ]
+                ]
+            },
+            "page": "97",
+            "title": "Trust as a crossroad: Culture, development and corruption",
+            "title-short": "Trust as a crossroad",
+            "type": "article-journal"
         }
     ],
     "project_biblios": []
