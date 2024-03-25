@@ -350,6 +350,96 @@
             "title": "Trust as a crossroad: Culture, development and corruption",
             "title-short": "Trust as a crossroad",
             "type": "article-journal"
+        },
+        {
+            "DOI": "10.5565/rev/athenead/v0n17.654",
+            "URL": "http://atheneadigital.net/article/view/n17-laso",
+            "author": [
+                {
+                    "family": "Laso",
+                    "given": "Esteban"
+                }
+            ],
+            "container-title": "Athenea Digital. Revista de pensamiento e investigación social",
+            "id": "laso2010b",
+            "issue": "17",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010,
+                        3,
+                        1
+                    ]
+                ]
+            },
+            "page": "97",
+            "title": "Trust as a crossroad: Culture, development and corruption",
+            "title-short": "Trust as a crossroad",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.53689/ea.v13i2.181",
+            "URL": "https://encrucijadaamericana.uahurtado.cl/index.php/ea/article/view/181",
+            "author": [
+                {
+                    "family": "Marchant Salamanca",
+                    "given": "Luz"
+                }
+            ],
+            "container-title": "Encrucijada Americana",
+            "id": "marchantsalamanca2021",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        12,
+                        30
+                    ]
+                ]
+            },
+            "page": "85",
+            "title": "La crisis política en chile y el rol de la democracia directa en la recomposición de la confianza democrática y la institucionalidad. Un ensayo para ampliar la mirada sobre las experiencias democráticas de chile y uruguay y aportar en el direccionamiento",
+            "type": "article-journal",
+            "volume": "13"
+        },
+        {
+            "DOI": "10.18359/rfce.3517",
+            "URL": "https://revistas.unimilitar.edu.co/index.php/rfce/article/view/3517",
+            "author": [
+                {
+                    "family": "Riffo",
+                    "given": "Fabián"
+                },
+                {
+                    "family": "Pérez",
+                    "given": "Daniela"
+                },
+                {
+                    "family": "Salazar Espinoza",
+                    "given": "César Antonio"
+                },
+                {
+                    "family": "Acuña Duarte",
+                    "given": "Andrés"
+                }
+            ],
+            "container-title": "Revista Facultad de Ciencias Económicas",
+            "id": "riffo2019",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        6,
+                        30
+                    ]
+                ]
+            },
+            "page": "83-104",
+            "title": "¿Qué influye en la confianza en las instituciones? Evidencia empírica para chile",
+            "type": "article-journal",
+            "volume": "27"
         }
     ],
     "project_biblios": []
