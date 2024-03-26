@@ -440,6 +440,44 @@
             "title": "¿Qué influye en la confianza en las instituciones? Evidencia empírica para chile",
             "type": "article-journal",
             "volume": "27"
+        },
+        {
+            "DOI": "10.18359/rfce.3517",
+            "URL": "https://revistas.unimilitar.edu.co/index.php/rfce/article/view/3517",
+            "author": [
+                {
+                    "family": "Riffo",
+                    "given": "Fabián"
+                },
+                {
+                    "family": "Pérez",
+                    "given": "Daniela"
+                },
+                {
+                    "family": "Salazar Espinoza",
+                    "given": "César Antonio"
+                },
+                {
+                    "family": "Acuña Duarte",
+                    "given": "Andrés"
+                }
+            ],
+            "container-title": "Revista Facultad de Ciencias Económicas",
+            "id": "riffo2019a",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        6,
+                        30
+                    ]
+                ]
+            },
+            "page": "83-104",
+            "title": "¿Qué influye en la confianza en las instituciones? Evidencia empírica para chile",
+            "type": "article-journal",
+            "volume": "27"
         }
     ],
     "project_biblios": []
